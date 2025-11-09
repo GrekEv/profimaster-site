@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M-500 - Промышленная покраска и строительные услуги</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <span class="logo-text">M-500</span>
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <a href="#home" class="nav-link">Главная</a>
+                <a href="#services" class="nav-link">Услуги</a>
+                <a href="#about" class="nav-link">О нас</a>
+                <a href="#advantages" class="nav-link">Преимущества</a>
+                <a href="#contact" class="nav-link">Контакты</a>
+            </div>
+            <div class="burger" id="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <video autoplay muted loop playsinline class="hero-video">
+            <source src="hero-video.mov" type="video/mp4">
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="hero-line">СТРОИМ</span>
+                    <span class="hero-line">БУДУЩЕЕ.</span>
+                </h1>
+                <p class="hero-subtitle">Промышленная покраска • Гидродинамическая мойка • Пескоструйная очистка</p>
+                <button class="btn-primary" onclick="scrollToSection('contact')">Оставить заявку</button>
+            </div>
+            <div class="hero-scroll">
+                <span>Прокрутить вниз</span>
+                <div class="scroll-indicator"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Marquee Section -->
+    <section class="marquee-section">
+        <div class="marquee">
+            <div class="marquee-content">
+                <span>КАЧЕСТВО. НАДЕЖНОСТЬ. ОПЫТ.</span>
+                <span>КАЧЕСТВО. НАДЕЖНОСТЬ. ОПЫТ.</span>
+                <span>КАЧЕСТВО. НАДЕЖНОСТЬ. ОПЫТ.</span>
+                <span>КАЧЕСТВО. НАДЕЖНОСТЬ. ОПЫТ.</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="title-accent">НОВЫЙ ПОДХОД.</span><br>
+                    ПРОФЕССИОНАЛЬНОЕ КАЧЕСТВО.
+                </h2>
+                <button class="btn-secondary" onclick="scrollToSection('services')">Смотреть наши услуги</button>
+            </div>
+            <div class="about-grid">
+                <div class="about-card">
+                    <h3>О КОМПАНИИ</h3>
+                    <p>Мы специализируемся на высококачественных работах по промышленной покраске, гидродинамической мойке, пескоструйной очистке и антикоррозии на промышленных объектах. Современные технологии и опытная команда — залог вашего успеха.</p>
+                </div>
+                <div class="about-card">
+                    <h3>НАША ЦЕЛЬ</h3>
+                    <p>Предоставлять услуги мирового уровня по доступным ценам. Работаем с крупными промышленными объектами по всей Беларуси, обеспечивая качество и соблюдение сроков на каждом проекте.</p>
+                </div>
+                <div class="about-card">
+                    <h3>НАШИ ЦЕННОСТИ</h3>
+                    <p class="values-list">/Прозрачность<br>/Качество<br>/Профессионализм<br>/Скорость</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section" id="services">
+        <div class="container">
+            <h2 class="section-title-center">ВИДЫ РАБОТ</h2>
+            <p class="services-subtitle">Полный спектр услуг промышленной покраски и очистки поверхностей</p>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">01</div>
+                    <h3>Покраска поверхностей</h3>
+                    <p>Покраска металлических, железобетонных конструкций и сооружений с гарантией до 15 лет. Используем современные материалы.</p>
+                    <button class="btn-service" onclick="scrollToSection('contact')">Заказать услугу</button>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">02</div>
+                    <h3>Гидродинамическая мойка</h3>
+                    <p>Очистка железобетонных, металлических конструкций и сооружений от любых загрязнений высоким давлением.</p>
+                    <button class="btn-service" onclick="scrollToSection('contact')">Заказать услугу</button>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">03</div>
+                    <h3>Пескоструйная очистка</h3>
+                    <p>Пескоструйная очистка металла, кирпича, дерева и иных поверхностей любой сложности. Быстро и качественно.</p>
+                    <button class="btn-service" onclick="scrollToSection('contact')">Заказать услугу</button>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">04</div>
+                    <h3>Антикоррозия на объектах</h3>
+                    <p>Соблюдаем степень подготовки и необходимые толщины материалов согласно техническому заданию.</p>
+                    <button class="btn-service" onclick="scrollToSection('contact')">Заказать услугу</button>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">05</div>
+                    <h3>Очистка загрязнений</h3>
+                    <p>Удаление сажи, нагара, промышленных выхлопов, производственного осадка с любых поверхностей.</p>
+                    <button class="btn-service" onclick="scrollToSection('contact')">Заказать услугу</button>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">06</div>
+                    <h3>Восстановление кровли</h3>
+                    <p>Мойка, покраска, реставрация старых кровель: черепица, шифер, металлочерепица, фальцевая кровля.</p>
+                    <button class="btn-service" onclick="scrollToSection('contact')">Заказать услугу</button>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">07</div>
+                    <h3>Пескоструйная обработка техники</h3>
+                    <p>Обработка грузовых автомобилей и строительной техники: дисков, кузова, днища, рамы.</p>
+                    <button class="btn-service" onclick="scrollToSection('contact')">Заказать услугу</button>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">08</div>
+                    <h3>Огнезащита конструкций</h3>
+                    <p>Огнезащитная обработка металлических и деревянных конструкций. Сертифицированные материалы.</p>
+                    <button class="btn-service" onclick="scrollToSection('contact')">Заказать услугу</button>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">09</div>
+                    <h3>Нанесение полимерных покрытий</h3>
+                    <p>Защитные полимерные покрытия для промышленных полов и конструкций. Высокая износостойкость.</p>
+                    <button class="btn-service" onclick="scrollToSection('contact')">Заказать услугу</button>
+                </div>
+            </div>
+            <div class="services-cta">
+                <h3>Не нашли нужную услугу?</h3>
+                <p>Свяжитесь с нами, и мы подберем решение для вашей задачи</p>
+                <div class="services-cta-actions">
+                    <button class="btn-primary" onclick="scrollToSection('contact')">Получить консультацию</button>
+                    <button class="btn-secondary" onclick="downloadPrice()">📄 Скачать прайс</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-card" data-aos="fade-up">
+                    <div class="feature-badge">PP</div>
+                    <h3>СВОЙ ПОКРАСОЧНЫЙ ЦЕХ</h3>
+                    <p>Подготовка и покраска конструкций и изделий на нашей территории.</p>
+                    <button class="btn-feature" onclick="scrollToSection('contact')">Узнать подробнее</button>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-badge">МК</div>
+                    <h3>МОБИЛЬНАЯ ПОКРАСОЧНАЯ КАМЕРА</h3>
+                    <p>Проведём малярные работы на территории вашего предприятия со своим оборудованием.</p>
+                    <button class="btn-feature" onclick="scrollToSection('contact')">Узнать подробнее</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advantages Section -->
+    <section class="advantages-section" id="advantages">
+        <div class="container">
+            <h2 class="section-title-center">НАШИ ПРЕИМУЩЕСТВА</h2>
+            <p class="services-subtitle">Почему выбирают именно нас для промышленных работ</p>
+            <div class="advantages-grid">
+                <div class="advantage-card" data-aos="zoom-in">
+                    <div class="advantage-number">01</div>
+                    <h4>Гарантия 2-15 лет</h4>
+                    <p>Официальный договор и гарантия на все виды работ</p>
+                </div>
+                <div class="advantage-card" data-aos="zoom-in" data-aos-delay="50">
+                    <div class="advantage-number">02</div>
+                    <h4>Качественные материалы</h4>
+                    <p>Современные материалы, гарантирующие результат</p>
+                </div>
+                <div class="advantage-card" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="advantage-number">03</div>
+                    <h4>Срок службы 15 лет</h4>
+                    <p>Долговечные покрытия с максимальным сроком службы</p>
+                </div>
+                <div class="advantage-card" data-aos="zoom-in" data-aos-delay="150">
+                    <div class="advantage-number">04</div>
+                    <h4>Промышленное оборудование</h4>
+                    <p>Современное оборудование для любых задач</p>
+                </div>
+                <div class="advantage-card" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="advantage-number">05</div>
+                    <h4>Персональный менеджер</h4>
+                    <p>Полное внимание и контроль на всех этапах</p>
+                </div>
+                <div class="advantage-card" data-aos="zoom-in" data-aos-delay="250">
+                    <div class="advantage-number">06</div>
+                    <h4>Работаем по всей Беларуси</h4>
+                    <p>Опытные бригады с прорабами по всей стране</p>
+                </div>
+                <div class="advantage-card" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="advantage-number">07</div>
+                    <h4>Быстрый старт</h4>
+                    <p>Приступаем к работе за 1-2 дня после договора</p>
+                </div>
+                <div class="advantage-card" data-aos="zoom-in" data-aos-delay="350">
+                    <div class="advantage-number">08</div>
+                    <h4>Опыт и надежность</h4>
+                    <p>Многолетний опыт работы с крупными объектами</p>
+                </div>
+            </div>
+            <div class="advantages-cta">
+                <button class="btn-primary btn-large" onclick="scrollToSection('contact')">Получить бесплатный выезд на объект</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+        <div class="container">
+            <div class="testimonial-card">
+                <p class="testimonial-text">"M-500 подошла к проекту не только с технической стороны, но и с точки зрения эффективности и долговечности. Это было критически важно для нашего производственного объекта!"</p>
+                <p class="testimonial-author">Дмитрий Иванов<br><span>Технический директор, Промстрой</span></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Managers Section -->
+    <section class="managers-section">
+        <div class="container">
+            <h2 class="section-title-center">НАШИ МЕНЕДЖЕРЫ</h2>
+            <p class="services-subtitle">Свяжитесь напрямую с ответственным менеджером</p>
+            <div class="managers-grid">
+                <div class="manager-card">
+                    <div class="manager-avatar">Ю</div>
+                    <h3>Менеджер Юрий</h3>
+                    <p class="manager-email">sales@m-500.by</p>
+                    <p class="manager-phone">+375 33 995 43 00</p>
+                    <div class="manager-actions">
+                        <a href="tel:+375339954300" class="btn-manager-call">📞 Позвонить</a>
+                        <a href="mailto:sales@m-500.by" class="btn-manager-email">✉ Email</a>
+                    </div>
+                </div>
+                <div class="manager-card">
+                    <div class="manager-avatar">Н</div>
+                    <h3>Менеджер Николай</h3>
+                    <p class="manager-email">komm@m-500.by</p>
+                    <p class="manager-phone">+375 29 292 9690</p>
+                    <div class="manager-actions">
+                        <a href="tel:+375292929690" class="btn-manager-call">📞 Позвонить</a>
+                        <a href="mailto:komm@m-500.by" class="btn-manager-email">✉ Email</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h2>СВЯЖИТЕСЬ С НАМИ</h2>
+                    <p class="contact-subtitle">Ответим на все вопросы и обсудим ваш проект</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <h4>ТЕЛЕФОН</h4>
+                            <p>+375 33 995 43 00</p>
+                            <p>+375 29 292 9690</p>
+                        </div>
+                        <div class="contact-item">
+                            <h4>EMAIL</h4>
+                            <p>sales@m-500.by</p>
+                            <p>komm@m-500.by</p>
+                        </div>
+                        <div class="contact-item">
+                            <h4>АДРЕС</h4>
+                            <p>224033, г. Брест<br>ул. Морозова, 5, оф. 6</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form-wrapper">
+                    <form class="contact-form" id="contactForm">
+                        <input type="text" placeholder="Ваше имя" required>
+                        <input type="tel" placeholder="Телефон" required>
+                        <input type="email" placeholder="Email" required>
+                        <textarea placeholder="Сообщение" rows="5" required></textarea>
+                        <label class="checkbox-label">
+                            <input type="checkbox" required>
+                            <span>Даю согласие на обработку персональных данных</span>
+                        </label>
+                        <button type="submit" class="btn-primary">Отправить заявку</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <div class="logo">
+                        <span class="logo-text">M-500</span>
+                    </div>
+                    <p>Промышленная покраска и строительные услуги</p>
+                </div>
+                <div class="footer-right">
+                    <p>© 2025 ООО М-500. Все права защищены</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Action Button -->
+    <div class="fab" id="fab" onclick="scrollToSection('contact')">
+        <span class="fab-icon">✉</span>
+        <span class="fab-text">Оставить заявку</span>
+    </div>
+
+    <!-- Call to Action Banner -->
+    <div class="cta-banner">
+        <div class="container">
+            <div class="cta-content">
+                <div class="cta-left">
+                    <h3>Готовы начать работу?</h3>
+                    <p>Получите бесплатный тестовый выезд на ваш объект</p>
+                </div>
+                <div class="cta-right">
+                    <button class="btn-cta" onclick="scrollToSection('contact')">Заказать выезд</button>
+                    <a href="tel:+375339954300" class="btn-cta-outline">Позвонить сейчас</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
