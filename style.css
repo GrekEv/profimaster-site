@@ -193,6 +193,12 @@ body {
     align-items: center;
     justify-content: center;
     touch-action: manipulation;
+    gap: 8px;
+}
+
+.phone-icon {
+    display: none;
+    font-size: 20px;
 }
 
 .nav-phone a:hover {
@@ -269,9 +275,20 @@ body {
         font-size: 18px;
     }
     
+    .phone-text {
+        display: none;
+    }
+    
+    .phone-icon {
+        display: inline-block;
+    }
+    
     .nav-phone a {
         font-size: 14px;
-        padding: 8px 16px;
+        padding: 10px;
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
     }
 }
 
@@ -286,9 +303,20 @@ body {
         letter-spacing: 1px;
     }
     
+    .phone-text {
+        display: none;
+    }
+    
+    .phone-icon {
+        display: inline-block;
+    }
+    
     .nav-phone a {
         font-size: 12px;
-        padding: 6px 12px;
+        padding: 10px;
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
     }
     
     .nav-menu {
