@@ -144,7 +144,7 @@ body {
     color: var(--secondary-color);
     text-decoration: none;
     font-weight: 500;
-    font-size: 16px;
+    font-size: 20px;
     position: relative;
     transition: var(--transition);
     white-space: nowrap;
@@ -175,7 +175,8 @@ body {
 }
 
 .nav-phone {
-    display: none;
+    display: flex;
+    align-items: center;
 }
 
 .nav-phone a {
@@ -199,7 +200,6 @@ body {
 
 .phone-icon {
     display: none;
-    font-size: 20px;
 }
 
 .nav-phone a:hover {
@@ -236,7 +236,7 @@ body {
     }
     
     .nav-link {
-        font-size: 16px;
+        font-size: 18px;
     }
 }
 
@@ -279,7 +279,7 @@ body {
     }
     
     .nav-link {
-        font-size: 16px;
+        font-size: 18px;
     }
     
     .phone-text {
@@ -288,7 +288,7 @@ body {
     
     .phone-icon {
         display: inline-block;
-        font-size: 20px;
+        font-size: 16px;
     }
     
     .nav-phone a {
@@ -313,7 +313,7 @@ body {
     }
     
     .nav-link {
-        font-size: 16px;
+        font-size: 18px;
     }
     
     .phone-text {
@@ -322,7 +322,7 @@ body {
     
     .phone-icon {
         display: inline-block;
-        font-size: 20px;
+        font-size: 16px;
     }
     
     .nav-phone a {
