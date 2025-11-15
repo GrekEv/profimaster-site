@@ -2098,7 +2098,15 @@ body {
 
 .fab-icon {
     font-size: 20px;
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fab-icon svg {
+    width: 100%;
+    height: 100%;
+    display: block;
 }
 
 .fab-text {
@@ -2124,6 +2132,13 @@ body {
     
     .fab-icon {
         font-size: 24px;
+        width: 24px;
+        height: 24px;
+    }
+    
+    .fab-icon svg {
+        width: 24px;
+        height: 24px;
     }
 }
 
