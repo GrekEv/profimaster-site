@@ -250,9 +250,9 @@ body {
         top: 75px;
         right: -100%;
         flex-direction: column;
-        background: #6B46C1;
+        background: var(--primary-color);
         padding: 40px;
-        box-shadow: -5px 0 20px rgba(107, 70, 193, 0.5);
+        box-shadow: -5px 0 20px rgba(30, 58, 95, 0.5);
         transition: var(--transition);
         min-width: 280px;
         height: calc(100vh - 75px);
@@ -602,7 +602,7 @@ body {
 
 /* Marquee Section */
 .marquee-section {
-    background: #6B46C1;
+    background: var(--primary-color);
     padding: 30px 0;
     overflow: hidden;
 }
