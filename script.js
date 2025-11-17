@@ -333,3 +333,166 @@ document.addEventListener('DOMContentLoaded', () => {
 
 console.log('🚀 M-500 Website loaded successfully!');
 
+// Products Carousel for Mobile
+function initProductsCarousel() {
+    const carousel = document.getElementById('productsCarousel');
+    const dotsContainer = document.getElementById('carouselDots');
+    const prevButton = document.getElementById('carouselPrev');
+    const nextButton = document.getElementById('carouselNext');
+    
+    if (!carousel || !dotsContainer) return;
+    
+    const items = carousel.querySelectorAll('.carousel-item');
+    if (items.length === 0) return;
+    
+    let currentIndex = 0;
+    
+    // Create dots
+    items.forEach((_, index) => {
+        const dot = document.createElement('div');
+        dot.className = 'carousel-dot' + (index === 0 ? ' active' : '');
+        dot.addEventListener('click', () => {
+            scrollToItem(index);
+        });
+        dotsContainer.appendChild(dot);
+    });
+    
+    const dots = dotsContainer.querySelectorAll('.carousel-dot');
+    
+    function updateActiveItem(index) {
+        currentIndex = index;
+        
+        items.forEach((item, i) => {
+            if (i === index) {
+                item.classList.add('active');
+            } else {
+                item.classList.remove('active');
+            }
+        });
+        
+        dots.forEach((dot, i) => {
+            if (i === index) {
+                dot.classList.add('active');
+            } else {
+                dot.classList.remove('active');
+            }
+        });
+        
+        // Update arrow states
+        if (prevButton) {
+            if (index === 0) {
+                prevButton.classList.add('disabled');
+            } else {
+                prevButton.classList.remove('disabled');
+            }
+        }
+        
+        if (nextButton) {
+            if (index === items.length - 1) {
+                nextButton.classList.add('disabled');
+            } else {
+                nextButton.classList.remove('disabled');
+            }
+        }
+    }
+    
+    function scrollToItem(index) {
+        if (index < 0 || index >= items.length) return;
+        
+        const item = items[index];
+        if (item) {
+            item.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+            updateActiveItem(index);
+        }
+    }
+    
+    function getCurrentIndex() {
+        const carouselRect = carousel.getBoundingClientRect();
+        const carouselCenter = carouselRect.left + carouselRect.width / 2;
+        
+        let closestIndex = 0;
+        let closestDistance = Infinity;
+        
+        items.forEach((item, index) => {
+            const itemRect = item.getBoundingClientRect();
+            const itemCenter = itemRect.left + itemRect.width / 2;
+            const distance = Math.abs(carouselCenter - itemCenter);
+            
+            if (distance < closestDistance) {
+                closestDistance = distance;
+                closestIndex = index;
+            }
+        });
+        
+        return closestIndex;
+    }
+    
+    // Arrow button handlers
+    if (prevButton) {
+        prevButton.addEventListener('click', () => {
+            const current = getCurrentIndex();
+            if (current > 0) {
+                scrollToItem(current - 1);
+            }
+        });
+    }
+    
+    if (nextButton) {
+        nextButton.addEventListener('click', () => {
+            const current = getCurrentIndex();
+            if (current < items.length - 1) {
+                scrollToItem(current + 1);
+            }
+        });
+    }
+    
+    // Update on scroll
+    let scrollTimeout;
+    carousel.addEventListener('scroll', () => {
+        clearTimeout(scrollTimeout);
+        scrollTimeout = setTimeout(() => {
+            const index = getCurrentIndex();
+            if (index !== currentIndex) {
+                updateActiveItem(index);
+            }
+        }, 100);
+    });
+    
+    // Initial update
+    updateActiveItem(0);
+    
+    // Touch/swipe support
+    let touchStartX = 0;
+    let touchEndX = 0;
+    
+    carousel.addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+    }, { passive: true });
+    
+    carousel.addEventListener('touchend', (e) => {
+        touchEndX = e.changedTouches[0].screenX;
+        handleSwipe();
+    }, { passive: true });
+    
+    function handleSwipe() {
+        const swipeThreshold = 50;
+        const diff = touchStartX - touchEndX;
+        
+        if (Math.abs(diff) > swipeThreshold) {
+            const current = getCurrentIndex();
+            if (diff > 0 && current < items.length - 1) {
+                // Swipe left - next item
+                scrollToItem(current + 1);
+            } else if (diff < 0 && current > 0) {
+                // Swipe right - previous item
+                scrollToItem(current - 1);
+            }
+        }
+    }
+}
+
+// Initialize carousel when DOM is loaded
+document.addEventListener('DOMContentLoaded', () => {
+    initProductsCarousel();
+});
+

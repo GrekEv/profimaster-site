@@ -17,9 +17,6 @@
                 <span class="logo-text">PROFIMASTER</span>
             </div>
             <div class="nav-menu" id="navMenu">
-                <div class="nav-menu-logo">
-                    <span class="logo-text">PROFIMASTER</span>
-                </div>
                 <a href="#home" class="nav-link">Главная</a>
                 <a href="#about" class="nav-link">О компании</a>
                 <a href="#advantages" class="nav-link">Наши преимущества</a>
@@ -145,6 +142,60 @@
                         </ul>
                     </div>
                 </div>
+            </div>
+            <!-- Mobile Carousel -->
+            <div class="products-carousel-wrapper">
+                <button class="carousel-arrow carousel-arrow-prev" id="carouselPrev" aria-label="Предыдущий товар">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <div class="products-carousel" id="productsCarousel">
+                    <div class="product-card carousel-item active">
+                        <div class="product-image-wrapper">
+                            <img src="product-1.png" alt="Pro Quartz 15кг" class="product-image">
+                            <div class="product-badge">В наличии</div>
+                            <a href="catalog-profimaster.pdf" download class="product-info-icon" title="Скачать каталог">
+                                <span>i</span>
+                            </a>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">PRO QUARTZ 15кг</h3>
+                            <p class="product-coverage">45-60м² на упаковку</p>
+                            <ul class="product-features">
+                                <li>✓ Высокая адгезия к минеральным основаниям</li>
+                                <li>✓ Содержит кварцевый песок мелкой фракции</li>
+                                <li>✓ Идеально для наружных и внутренних работ</li>
+                                <li>✓ Водно-дисперсионные покрытия</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="product-card carousel-item">
+                        <div class="product-image-wrapper">
+                            <img src="product-1.png" alt="Pro Quartz - детали" class="product-image">
+                            <div class="product-badge popular">Популярный</div>
+                            <a href="catalog-profimaster.pdf" download class="product-info-icon" title="Скачать каталог">
+                                <span>i</span>
+                            </a>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">PRO QUARTZ (Детали)</h3>
+                            <p class="product-coverage">Полная информация о продукте</p>
+                            <ul class="product-features">
+                                <li>✓ Профессиональная грунтовка PROFIMASTER</li>
+                                <li>✓ Для наружных и внутренних работ</li>
+                                <li>✓ Создает шероховатую поверхность</li>
+                                <li>✓ Морозостойкая формула</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-arrow carousel-arrow-next" id="carouselNext" aria-label="Следующий товар">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <div class="carousel-dots" id="carouselDots"></div>
             </div>
             <div class="products-info-block">
                 <h3>О продукте Pro Quartz</h3>
@@ -347,7 +398,6 @@
                 </div>
                 <div class="cta-right">
                     <button class="btn-cta" onclick="scrollToSection('contact')">Оставить заявку</button>
-                    <a href="tel:+375292929690" class="btn-cta-outline">Позвонить</a>
                 </div>
             </div>
         </div>
