@@ -415,6 +415,11 @@ body {
         letter-spacing: 1px;
     }
     
+    .hero-subtitle-small {
+        font-size: 13px;
+        margin-bottom: 25px;
+    }
+    
     .hero-subtext {
         font-size: 13px;
         margin-bottom: 30px;
@@ -443,7 +448,12 @@ body {
     
     .hero-subtitle {
         font-size: 12px;
-        margin-bottom: 10px;
+        margin-bottom: 8px;
+    }
+    
+    .hero-subtitle-small {
+        font-size: 11px;
+        margin-bottom: 20px;
     }
     
     .hero-subtext {
@@ -500,11 +510,21 @@ body {
 .hero-subtitle {
     font-size: clamp(16px, 2vw, 20px);
     color: rgba(255, 255, 255, 0.95);
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     animation: fadeIn 0.8s ease-out 0.3s backwards;
     text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
     font-weight: 600;
     letter-spacing: 2px;
+}
+
+.hero-subtitle-small {
+    font-size: clamp(14px, 1.5vw, 18px);
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 30px;
+    animation: fadeIn 0.8s ease-out 0.4s backwards;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    font-weight: 400;
+    letter-spacing: 1px;
 }
 
 .hero-subtext {
@@ -2081,6 +2101,10 @@ body {
     gap: 20px;
 }
 
+.contact-form button {
+    margin-top: 10px;
+}
+
 .contact-form input,
 .contact-form textarea {
     padding: 18px 25px;
@@ -2108,15 +2132,27 @@ body {
 
 .checkbox-label {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     gap: 10px;
     font-size: 14px;
     color: #666;
     cursor: pointer;
+    margin: 0;
+    line-height: 1.5;
 }
 
-.checkbox-label input {
-    margin-top: 2px;
+.checkbox-label input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    min-width: 20px;
+    cursor: pointer;
+    accent-color: var(--primary-color);
+    flex-shrink: 0;
+    margin: 0;
+    border: 2px solid var(--medium-gray);
+    border-radius: 4px;
+    -webkit-appearance: checkbox;
+    appearance: checkbox;
 }
 
 @media (max-width: 968px) {
